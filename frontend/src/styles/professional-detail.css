@@ -1,0 +1,397 @@
+/* Booking Detail Page */
+.booking-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 60px);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 10px;
+}
+
+.booking-header h1 {
+  color: white;
+  margin: 0;
+}
+
+.booking-header .status {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.status.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status.accepted {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status.rejected {
+  background-color: #fee2e2;
+  color: #7f1d1d;
+}
+
+.status.cancelled {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+/* Booking Info Grid */
+.booking-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary-color);
+}
+
+.info-card h3 {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-card .bold {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.info-card p {
+  color: var(--text-light);
+  margin: 0.25rem 0;
+}
+
+/* Notes Section */
+.notes-section {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  border-left: 4px solid #fbbf24;
+}
+
+.notes-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.notes-section p {
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Review Section */
+.review-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.review-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.review-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.form-group label {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.star:hover,
+.star.active {
+  opacity: 1;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: #38a169;
+  transform: translateY(-2px);
+}
+
+.btn-success:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--light-bg);
+  border-color: var(--primary-color);
+}
+
+/* Profession Directory */
+.profession-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 60px);
+}
+
+.profession-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profession-header h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.profession-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.professionals-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.profession-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-color);
+}
+
+.profession-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  flex: 1;
+}
+
+.card-title h3 {
+  color: var(--primary-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.approval-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.approval-badge.approved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.approval-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.card-rating {
+  text-align: right;
+}
+
+.card-rating .stars {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.card-rating .rating-text {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.card-details {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-details p {
+  margin: 0.5rem 0;
+}
+
+.category {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.experience {
+  color: var(--text-light);
+}
+
+.rate {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.qualifications {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.card-stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.stat {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .booking-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .booking-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .professionals-list {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    justify-content: flex-start;
+  }
+}
